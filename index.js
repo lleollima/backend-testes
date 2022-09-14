@@ -12,6 +12,9 @@ const response = money.toLocaleString("pt-BR", {
   currency: "BRL",
 });
 
+const january = new Date(9e8);
+const spanish = new Intl.DateTimeFormat("es", { month: "long" });
+
 // comentário
 
 const PORT = process.env.PORT || 3001;
@@ -19,7 +22,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.get("/api", (req, res) => {
-  res.json({ message: response });
+  res.json({ message: response, date: spanish });
 });
 
 app.listen(PORT, () => {
