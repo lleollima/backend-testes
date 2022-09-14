@@ -22,7 +22,11 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.get("/api", (req, res) => {
-  res.json({ message: response, date: spanish });
+  res.json({
+    message: response,
+    test: january,
+    date: spanish.format(january) === "enero" ? true : false,
+  });
 });
 
 app.listen(PORT, () => {
