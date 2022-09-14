@@ -2,8 +2,8 @@
 
 const express = require("express");
 
-const v1 = 1.96;
-const v2 = 1.04;
+const v1 = 99000.96;
+const v2 = 999.04;
 
 const money = v1 + v2;
 
